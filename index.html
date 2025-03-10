@@ -1,35 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>tabella auto</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabella Auto</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
 
-    <body>
-        <h1>TABELLA AUTO</h1>
-        <table>
-            <thead>
-                <tr>
-                    <th>Nome Colonna</th>
-                    <th>Tipo di Dato</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>id</td><td>INT AUTO_INCREMENT</td><td>PRIMARY KEY</td></tr>
-                <tr><td>marca</td><td>VARCHAR(50)</td><td>NOT NULL</td></tr>
-                <tr><td>modello</td><td>VARCHAR(50)</td><td>NOT NULL</td></tr>
-                <tr><td>anno</td><td>YEAR</td><td>NOT NULL</td></tr>
-                <tr><td>chilometraggio</td><td>INT</td><td>DEFAULT 0</td></tr>
-                <tr><td>carburante</td><td>ENUM</td><td>CHECK (carburante IN ('Benzina', 'Diesel', 'Elettrico', 'Ibrido', 'GPL', 'Metano'))</td></tr>
-                <tr><td>cambio</td><td>ENUM</td><td>CHECK (cambio IN ('Manuale', 'Automatico'))</td></tr>
-                <tr><td>colore</td><td>VARCHAR(30)</td><td>DEFAULT 'Nero'</td></tr>
-                <tr><td>prezzo</td><td>DECIMAL(10,2)</td><td>NOT NULL</td></tr>
-                <tr><td>descrizione</td><td>TEXT</td><td>NULLABLE</td></tr>
-                <tr><td>disponibile</td><td>BOOLEAN</td><td>DEFAULT 1</td></tr>
-                <tr><td>data_inserimento</td><td>TIMESTAMP</td><td>DEFAULT CURRENT_TIMESTAMP</td></tr>
-            </tbody>
-        </table>
-    </body>
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Tabella Auto</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome Colonna</th>
+                <th>Tipo di Dato</th>
+                <th>Descrizione</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>id</td>
+                <td>INT</td>
+                <td>AUTO_INCREMENT, PRIMARY KEY</td>
+            </tr>
+            <tr>
+                <td>marca</td>
+                <td>VARCHAR(50)</td>
+                <td>NOT NULL</td>
+            </tr>
+            <tr>
+                <td>modello</td>
+                <td>VARCHAR(50)</td>
+                <td>NOT NULL</td>
+            </tr>
+            <tr>
+                <td>anno</td>
+                <td>YEAR</td>
+                <td>NOT NULL</td>
+            </tr>
+            <tr>
+                <td>chilometraggio</td>
+                <td>INT</td>
+                <td>DEFAULT 0</td>
+            </tr>
+            <tr>
+                <td>carburante</td>
+                <td>ENUM</td>
+                <td>CHECK (carburante IN ('Benzina', 'Diesel', 'Elettrico', 'Ibrido', 'GPL', 'Metano'))</td>
+            </tr>
+            <tr>
+                <td>cambio</td>
+                <td>ENUM</td>
+                <td>CHECK (cambio IN ('Manuale', 'Automatico'))</td>
+            </tr>
+            <tr>
+                <td>colore</td>
+                <td>VARCHAR(30)</td>
+                <td>DEFAULT 'Nero'</td>
+            </tr>
+            <tr>
+                <td>prezzo</td>
+                <td>DECIMAL(10,2)</td>
+                <td>NOT NULL</td>
+            </tr>
+            <tr>
+                <td>descrizione</td>
+                <td>TEXT</td>
+                <td>NULLABLE</td>
+            </tr>
+            <tr>
+                <td>disponibile</td>
+                <td>BOOLEAN</td>
+                <td>DEFAULT 1</td>
+            </tr>
+            <tr>
+                <td>data_inserimento</td>
+                <td>TIMESTAMP</td>
+                <td>DEFAULT CURRENT_TIMESTAMP</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
 </html>
